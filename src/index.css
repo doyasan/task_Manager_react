@@ -1,13 +1,112 @@
+@charset "UTF-8";
+/*================================
+	サイトごとに設定
+=================================*/
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
+  background: #eee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.task {
+  margin: auto;
+  padding: 20px;
+  max-width: 400px;
 }
+
+h1 {
+  margin: 0 auto 40px;
+  text-align: center;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #000;
+}
+
+.task__block {
+  padding: 20px 20px;
+}
+.task__block h3 {
+  position: relative;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.task__block h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: #000;
+}
+.task__block input,
+.task__block button {
+  border-radius: 16px;
+  outline: none;
+  border: none;
+}
+.task__block input {
+  box-sizing: border-box;
+  margin-right: 10px;
+  padding: 4px 10px;
+  width: 100%;
+}
+.task__block button {
+  margin: 0 4px;
+  padding: 4px 8px;
+  color: #fff;
+  background: #8f8f8f;
+  white-space: nowrap;
+}
+.task__block button:hover {
+  background: rgb(255, 194, 255);
+  color: #000;
+}
+.task__block button:first-of-type {
+  margin-left: auto;
+}
+
+.task__list {
+  padding: 0;
+}
+
+.task__item {
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+  padding: 8px 0;
+}
+.task__item:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}
+
+#task--input {
+  background: rgb(200, 240, 255);
+}
+#task--input label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#task--incomplete {
+  background: rgb(213, 255, 213);
+}
+
+#task--complete {
+  background: rgb(255, 237, 203);
+}
+
+.message--error {
+  color: rgb(241, 0, 0);
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
